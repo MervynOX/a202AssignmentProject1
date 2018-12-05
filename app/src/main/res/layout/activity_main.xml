@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context="com.example.user.a202assignmentproject1.MainActivity">
+
+    <TextView
+        android:id="@+id/task_name_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Task Name:"
+        android:textSize="20sp"
+        android:layout_margin="9dp"/>
+
+    <EditText
+        android:layout_toRightOf="@id/task_name_label"
+        android:id="@+id/task_name_edit_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:layout_below="@id/task_name_label"
+        android:id="@+id/Comment_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Comment (Optional): "
+        android:textSize="20sp"
+        android:layout_margin="9dp"/>
+
+    <EditText
+        android:layout_below="@id/task_name_edit_text"
+        android:layout_toRightOf="@id/Comment_label"
+        android:id="@+id/Comment_edit_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:layout_below="@id/Comment_label"
+        android:id="@+id/Timer_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Timer(Optional): "
+        android:textSize="20sp"
+        android:layout_margin="9dp"/>
+
+    <TextView
+        android:id="@+id/timer_amount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/button_decrease"
+        android:layout_below="@id/Comment_edit_text"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="12dp"
+        android:text="0"
+        android:textSize="20sp" />
+
+    <Button
+        android:id="@+id/button_decrease"
+        android:layout_width="30dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="9dp"
+        android:layout_toEndOf="@id/Timer_label"
+        android:layout_below="@id/Comment_edit_text"
+        android:text="-"
+        android:textSize="10dp" />
+
+    <Button
+        android:id="@+id/button_increase"
+        android:layout_width="30dp"
+        android:layout_height="40dp"
+        android:layout_below="@id/Comment_edit_text"
+        android:layout_toEndOf="@+id/timer_amount"
+        android:layout_marginTop="9dp"
+        android:text="+"
+        android:textSize="10dp"/>
+
+    <Button
+        android:id="@+id/button_add"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/Timer_label"
+        android:text="Add"
+        android:layout_margin="9dp"/>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/button_add" />
+
+</RelativeLayout>
